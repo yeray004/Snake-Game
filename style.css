@@ -47,6 +47,10 @@ button{
 i{
     font-size: 1.9em;
     color: #d79e54;
+    transition: all .2s;
+}
+i:hover{
+    transform: scale(1.2);
 }
 @media(max-width: 768px){
     #game-board{

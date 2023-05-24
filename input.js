@@ -1,28 +1,51 @@
 let inputDirection = { x: 0, y: 0 }
 let lastInputDirection = { x: 0, y: 0 }
-/* document.getElementById('btnLeft').addEventListener('click', moveLeft);
-document.getElementById('btnRigth').addEventListener('click', moveRight);
-document.getElementById('btnUp').addEventListener('click', rotate);
-document.getElementById('btnDown').addEventListener('click', moveDown);  */
+
+
+function up(){
+    if(lastInputDirection.y !== 0){
+        return;
+    } else{
+        inputDirection = { x: 0, y: -1 }
+    }
+}
+function down(){
+    if(lastInputDirection.y !== 0){
+        return;
+    } else{
+        inputDirection = { x: 0, y: 1 }
+    }
+}
+function left(){
+    if(lastInputDirection.x !== 0){
+        return;
+    } else{
+        inputDirection = { x: -1, y: 0 }
+    }
+}
+function right(){
+    if(lastInputDirection.x !== 0){
+        return;
+    } else{
+        inputDirection = { x: 1, y: 0 }
+    }
+}
+
+document.getElementById('btnUp').addEventListener('click', up);
+document.getElementById('btnDown').addEventListener('click', down); 
+document.getElementById('btnLeft').addEventListener('click', left);
+document.getElementById('btnRight').addEventListener('click', right);
 
 window.addEventListener('keydown', e => {
     switch(e.key){
         case 'ArrowUp':
-            if(lastInputDirection.y !== 0) break
-            inputDirection = { x: 0, y: -1 }
-            break;
+            up(); break;
         case 'ArrowDown':
-            if(lastInputDirection.y !== 0) break
-            inputDirection = { x: 0, y: 1 }
-            break;
+            down(); break;
         case 'ArrowLeft':
-            if(lastInputDirection.x !== 0) break
-            inputDirection = { x: -1, y: 0 }
-            break;
+            left(); break;
         case 'ArrowRight':
-            if(lastInputDirection.x !== 0) break
-            inputDirection = { x: 1, y: 0 }
-            break;
+            right(); break;
     }
 })
 
