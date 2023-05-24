@@ -31,9 +31,10 @@ body{
     border-radius: 5px;
 }
 .buttons{
-    margin: 2em 0 3em 0;
+    margin: 2em 0 7em 0;
     display: none;
-    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
 }
 button{
@@ -51,6 +52,9 @@ i{
 }
 i:hover{
     transform: scale(1.2);
+}
+#btnUp{
+    grid-column: span 3;
 }
 @media(max-width: 768px){
     #game-board{
