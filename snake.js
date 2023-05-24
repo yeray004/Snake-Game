@@ -3,6 +3,8 @@ import { getInputDirection } from "./input.js";
 export const SNAKE_SPEED = 5;
 const snakeBody = [{ x: 11, y: 11 }]
 let newSegments = 0;
+let score = 0;
+const scoreEl = document.getElementById('score')
 
 export function update(){
     addSegments();
@@ -50,7 +52,9 @@ function equalPositions(pos1, pos2){
 
 function addSegments(){
     for(let i = 0; i < newSegments; i++){
-        snakeBody.push({...snakeBody[snakeBody.length -1] })
+        score++
+        scoreEl.innerHTML = score
+        snakeBody.push({...snakeBody[snakeBody.length -1]})
     }
 
     newSegments = 0;
