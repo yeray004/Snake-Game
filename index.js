@@ -17,9 +17,10 @@ function main(currentTime){
 window.requestAnimationFrame(main);
 
 function update(){
-    updateSnake()
+    updateSnake();
 }
 
 function draw(){
+    gameBoard.innerHTML = '' //We remove the previous pieces
     drawSnake(gameBoard)
 }

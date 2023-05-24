@@ -17,14 +17,15 @@ body{
     grid-template-columns: repeat(21, 1fr);
     grid-template-rows: repeat(21, 1fr);
     background-color: #4dff6e;
+    border: solid .35vmin #fff;
 }
 .snake{
     background-color: blue;
-    border: solid .25vmin wheat;
+    outline: solid .25vmin #fff;
 }
 .food{
     background-color: red;
-    border: solid .25vmin wheat;
+    border: solid .25vmin #fff;
 }
 .buttons{
     margin: 2em 0 3em 0;
