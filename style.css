@@ -7,7 +7,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: purple;
+    background-color: #26798E;
 }
 #game-board{
     width: 80vmin;
@@ -16,16 +16,19 @@ body{
     display: grid;
     grid-template-columns: repeat(21, 1fr);
     grid-template-rows: repeat(21, 1fr);
-    background-color: #4dff6e;
-    border: solid .35vmin #fff;
+    background-color: #ffe3b3;
+    outline: solid .45vmin #d79e54;
+    border-radius: 5px;
 }
 .snake{
-    background-color: blue;
-    outline: solid .25vmin #fff;
+    background-color: #63caa7;
+    outline: solid .35vmin #4ba185;
+    border-radius: 5px;
 }
 .food{
-    background-color: red;
-    border: solid .25vmin #fff;
+    background-color: #ffc172;
+    border: solid .35vmin #d79e54;
+    border-radius: 5px;
 }
 .buttons{
     margin: 2em 0 3em 0;
@@ -34,15 +37,16 @@ body{
     gap: 1em;
 }
 button{
-    width: 4em;
-    height: 4em;
-    border-radius: .5em;
-    border-color: blueviolet;
+    width: 6em;
+    height: 6em;
+    border-radius: .7em;
+    border: solid #d79e54;
     background-color: white;
+    cursor: pointer;
 }
 i{
-    font-size: 1.5em;
-    color: blueviolet;
+    font-size: 1.9em;
+    color: #d79e54;
 }
 @media(max-width: 768px){
     #game-board{
